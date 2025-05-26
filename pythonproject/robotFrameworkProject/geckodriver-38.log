@@ -1,0 +1,15 @@
+1748104743185	geckodriver	INFO	Listening on 127.0.0.1:50804
+1748104746269	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50805" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\alyth\\AppData\\Local\\Temp\\rust_mozprofile7IV5W9"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1748104746638	Marionette	INFO	Marionette enabled
+1748104746794	Marionette	INFO	Listening on port 50814
+WebDriver BiDi listening on ws://127.0.0.1:50805
+Read port: 50814
+1748104746977	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50805/devtools/browser/fc429a94-58bc-4793-a25e-2680910693c0
+1748104771120	Marionette	INFO	Stopped listening on port 50814
+Dynamically enable window occlusion 1
+console.error: "TelemetryScheduler.shutdown - Already shut down"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 569: NS_ERROR_FAILURE

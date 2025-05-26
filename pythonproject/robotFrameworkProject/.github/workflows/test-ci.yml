@@ -1,0 +1,46 @@
+name: Test fonctionnel Robot Framework
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Cloner le repo
+      uses: actions/checkout@v3
+
+    - name: Installer Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Installer Chrome
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget unzip
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo apt install -y ./google-chrome-stable_current_amd64.deb
+
+    - name: Installer ChromeDriver
+      run: |
+        CHROME_VERSION=$(google-chrome --version | grep -oP "\d+\.\d+\.\d+")
+        wget -O chromedriver.zip "https://chromedriver.storage.googleapis.com/$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION})/chromedriver_linux64.zip"
+        unzip chromedriver.zip
+        sudo mv chromedriver /usr/local/bin/
+
+    - name: Installer les dépendances
+      run: pip install -r requirements.txt
+
+    - name: Lancer les tests
+      run: robot -d results tests/
+
+    - name: Publier le rapport de test
+      uses: actions/upload-artifact@v3
+      with:
+        name: rapport-de-test
+        path: results/

@@ -1,0 +1,11 @@
+tests/ : Contient les suites de tests organisées par fonctionnalité.
+
+resources/keywords/ : Contient les mots-clés personnalisés réutilisables.
+
+resources/variables/ : Contient les variables globales utilisées dans les tests.
+
+drivers/ : Contient les drivers nécessaires pour Selenium (par exemple, chromedriver.exe).
+
+output/ : Répertoire où les rapports de tests seront générés.
+
+requirements.txt : Liste des dépendances Python nécessaires

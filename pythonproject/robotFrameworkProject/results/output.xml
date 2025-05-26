@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.8.10 on win32)" generated="2025-05-26T20:00:56.932933" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\alyth\pythonproject\robotFrameworkProject\tests">
+<suite id="s1-s1" name="Connexion" source="C:\Users\alyth\pythonproject\robotFrameworkProject\tests\connexion">
+<suite id="s1-s1-s1" name="Connexion Tests" source="C:\Users\alyth\pythonproject\robotFrameworkProject\tests\connexion\connexion_tests.robot">
+<test id="s1-s1-s1-t1" name="Accés à la page d'accueil Machallah travel" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-26T20:00:57.340968" level="INFO">Opening browser 'firefox' to base url 'http://recette-front.machallahtravels.com/ chrome'.</msg>
+<arg>${URL} ${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-26T20:00:57.340968" elapsed="8.138241"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-26T20:01:05.501737" level="INFO">Current page contains text 'Machallah'.</msg>
+<arg>Machallah</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-26T20:01:05.480207" elapsed="0.021530"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-26T20:01:05.503689" elapsed="2.871050"/>
+</kw>
+<status status="PASS" start="2025-05-26T20:00:57.338764" elapsed="11.039353"/>
+</test>
+<doc>Verifier la page de Machallah</doc>
+<status status="PASS" start="2025-05-26T20:00:56.965324" elapsed="11.417571"/>
+</suite>
+<status status="PASS" start="2025-05-26T20:00:56.963510" elapsed="11.425106"/>
+</suite>
+<suite id="s1-s2" name="Test Webapp" source="C:\Users\alyth\pythonproject\robotFrameworkProject\tests\test_webapp.robot">
+<test id="s1-s2-t1" name="Accés à la page d'accueil Machallah transport" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-26T20:01:08.405023" level="INFO">Opening browser 'firefox' to base url 'http://recette-front.machallahtravels.com/ chrome'.</msg>
+<arg>${URL} ${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-26T20:01:08.404025" elapsed="7.862315"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-26T20:01:16.289190" level="INFO">Current page contains text 'Machallah'.</msg>
+<arg>Machallah</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-26T20:01:16.266340" elapsed="0.022850"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-26T20:01:16.289755" elapsed="2.955227"/>
+</kw>
+<status status="PASS" start="2025-05-26T20:01:08.401612" elapsed="10.844366"/>
+</test>
+<doc>Verifier la page de Machallah</doc>
+<status status="PASS" start="2025-05-26T20:01:08.391082" elapsed="10.859866"/>
+</suite>
+<status status="PASS" start="2025-05-26T20:00:56.934929" elapsed="22.323240"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
+<stat name="Connexion" id="s1-s1" pass="1" fail="0" skip="0">Tests.Connexion</stat>
+<stat name="Connexion Tests" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.Connexion.Connexion Tests</stat>
+<stat name="Test Webapp" id="s1-s2" pass="1" fail="0" skip="0">Tests.Test Webapp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
